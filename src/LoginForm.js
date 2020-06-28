@@ -2,6 +2,7 @@ import React from 'react';
 import InputField from './InputField';
 import SumbitButton from './SubmitButton';
 import UserStore from './stores/UserStore';
+import SubmitButton from './SubmitButton';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -81,6 +82,19 @@ class LoginForm extends React.Component {
       value={this.state.username ? this.state.username : ''}
       onChange={ (val) => this.setInputValue('username', val) }
       />
+      <InputField
+      type='password'
+      placeholder='Password'
+      value={this.state.password ? this.state.password : ''}
+      onChange={ (val) => this.setInputValue('password', val) }
+      />
+
+      <SubmitButton
+      text='Login'
+      disabled={this.state.buttonDisabled}
+      onClick={ () => this.doLogin() }
+      />
+      
     </div>
   );
 }
