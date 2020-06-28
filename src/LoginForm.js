@@ -1,8 +1,7 @@
 import React from 'react';
 import InputField from './InputField';
-import SumbitButton from './SubmitButton';
-import UserStore from './stores/UserStore';
 import SubmitButton from './SubmitButton';
+import UserStore from './stores/UserStore';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -68,7 +67,7 @@ class LoginForm extends React.Component {
     }
     catch(e) {
       console.log(e);
-      this.resetForrm();
+      this.resetForm();
     }
   }
 
