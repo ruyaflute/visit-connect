@@ -2,13 +2,12 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import UserStore from './stores/UserStore';
 import LoginForm from './LoginForm';
-import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import './App.css';
 
 class App extends React.Component {
 
-  async compomentDidMount() {
+  async componentDidMount() {
 
     try {
 
@@ -16,7 +15,7 @@ class App extends React.Component {
         method: 'post',
         headers: {
           'Accept': 'application/json',
-          'Content-type': 'application/json'
+          'Content-Type': 'application/json'
         }
       });
 
@@ -85,7 +84,7 @@ class App extends React.Component {
               <SubmitButton 
                 text={'log out'}
                 disable={false}
-                onCLick={ () => this.doLogout() }
+                onClick={ () => this.doLogout() }
               />
 
             </div>
@@ -101,9 +100,7 @@ class App extends React.Component {
         </div>
       );
     }
-
- 
-}
+  }
 }
 
 export default observer(App);
