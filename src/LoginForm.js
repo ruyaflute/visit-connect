@@ -8,7 +8,7 @@ class LoginForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: '',
+      /* password: '',*/
       buttonDisabled: false
     }
   }
@@ -26,7 +26,7 @@ class LoginForm extends React.Component {
   resetForm() {
     this.setState({
       username: '',
-      password: '',
+      /*password: '',*/
       buttonDisabled: false
     })
   }
@@ -51,7 +51,7 @@ class LoginForm extends React.Component {
         },
         body: JSON.stringify({
           username: this.state.username,
-          password: this.state.password
+          /*password: this.state.password*/
         })
       });
       
@@ -77,16 +77,16 @@ class LoginForm extends React.Component {
       Log in
       <InputField
       type='text'
-      placeholder='Username'
+      placeholder='Email'
       value={this.state.username ? this.state.username : ''}
       onChange={ (val) => this.setInputValue('username', val) }
       />
-      <InputField
+      {/* <InputField
       type='password'
       placeholder='Password'
       value={this.state.password ? this.state.password : ''}
       onChange={ (val) => this.setInputValue('password', val) }
-      />
+      /> */}
 
       <SubmitButton
       text='Login'
