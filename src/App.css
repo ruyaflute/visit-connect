@@ -3,7 +3,6 @@ body, html, #root, .app, .container {
   height: 100%;
 }
 
-
 .container {
   font-size: 28px;
   color: #fff;
@@ -54,4 +53,13 @@ body, html, #root, .app, .container {
  border-radius: 4px;
  background: #fff;
  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.visitFor {
+  margin-bottom: 0%;
 }
