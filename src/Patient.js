@@ -28,7 +28,36 @@ class Patient extends React.Component {
         <Form.Control type="range" />
         </Form.Group>
 
-        <h5 className="visitFor"> I'm requesting an visit for: </h5>
+        <Form.Label as="legend" column sm={2}>
+        Language requesting: 
+      </Form.Label>
+  {['checkbox'].map((type) => (
+    <div key={`custom-inline-${type}`} className="mb-3">
+      <Form.Check
+        custom
+        inline
+        label="Enlish"
+        type={type}
+        id={`custom-inline-${type}-1`}
+      />
+      <Form.Check
+        custom
+        inline
+        label="Español"
+        type={type}
+        id={`custom-inline-${type}-2`}
+      />
+      <Form.Check
+        custom
+        inline
+        label="中文"
+        type={type}
+        id={`custom-inline-${type}-3`}
+      />
+    </div>
+  ))}
+       <br/>
+        <Form.Label>I'm requesting an visit for: </Form.Label>
         <DatePicker
         selected={this.state.startDate}
         onChange={this.handleChange}
@@ -37,7 +66,7 @@ class Patient extends React.Component {
 
     <Form.Group as={Col} controlId="formGridTime">
       <Form.Label>Time: </Form.Label>
-      <Form.Control type="time" placeholder="Time" />
+      <Form.Control type="time" placeholder="Time" className="align-right" />
     </Form.Group>
   </Row>
 
@@ -47,40 +76,15 @@ class Patient extends React.Component {
   </Form.Group>
 
   <Row>
-
-    <Form.Group  as={Row}>
-      <Form.Label as="legend" column sm={2}>
-        City: 
-      </Form.Label>
-      <Col sm={10}>
-        <Form.Check
-          type="radio"
-          label="Manhattan"
-          name="formHorizontalRadios"
-          id="formHorizontalRadios1"
-        />
-        <Form.Check
-          type="radio"
-          label="Brooklyn"
-          name="formHorizontalRadios"
-          id="formHorizontalRadios2"
-        />
-        <Form.Check
-          type="radio"
-          label="Queens"
-          name="formHorizontalRadios"
-          id="formHorizontalRadios3"
-        />
-         <Form.Check
-          type="radio"
-          label="Bronx"
-          name="formHorizontalRadios"
-          id="formHorizontalRadios"
-        />
-      </Col>
-    </Form.Group>
-
-
+  <Form.Group controlId="exampleForm.SelectCustom">
+    <Form.Label>City: </Form.Label>
+    <Form.Control as="select" custom>
+      <option>Manhattan</option>
+      <option>Brooklyn</option>
+      <option>Queens</option>
+      <option>Bronx</option>
+    </Form.Control>
+  </Form.Group>
 
     <Form.Group as={Col} controlId="formGridZip">
       <Form.Label>Zip: </Form.Label>
@@ -88,18 +92,17 @@ class Patient extends React.Component {
     </Form.Group>
   </Row>
 
+  <Form.Group as={Col} controlId="formGridPhone">
+      <Form.Label>Phone: </Form.Label>
+      <Form.Control type="number" placeholder="Enter phone number" />
+    </Form.Group>
+
   <InputGroup>
     <InputGroup.Prepend>
       <InputGroup.Text>Reason for Visit:</InputGroup.Text>
     </InputGroup.Prepend>
     <FormControl className="textarea" as="textarea"/> 
   </InputGroup>
-
-
-  <Form.Group as={Col} controlId="formGridPhone">
-      <Form.Label>Phone: </Form.Label>
-      <Form.Control type="number" placeholder="Enter phone number" />
-    </Form.Group>
 
   <Button variant="primary" type="submit">
     Submit
