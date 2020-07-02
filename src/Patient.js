@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Form, InputGroup } from "react-bootstrap";
+import { Col, Row, Form, InputGroup, FormGroup } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import { Button, FormControl, Container } from 'react-bootstrap';
 import './App.css';
@@ -20,18 +20,16 @@ class Patient extends React.Component {
   render() {
   return (
     <div className="patient">
-
-
+<br/><br/>
 <Form>
-    <Form.Group controlId="formBasicEmail">
-  <Form.Label>How do I feel today: </Form.Label>
+    <Form.Group as={Col} controlId="formBasicEmail">
+      <Form.Label>How do I feel today: </Form.Label>
         <Form.Control type="range" />
-        </Form.Group>
 
-        <Form.Label as="legend" column sm={2}>
+        <Form.Label as="legend">
         Language requesting: 
       </Form.Label>
-  {['checkbox'].map((type) => (
+      {['checkbox'].map((type) => (
     <div key={`custom-inline-${type}`} className="mb-3">
       <Form.Check
         custom
@@ -56,47 +54,55 @@ class Patient extends React.Component {
       />
     </div>
   ))}
-       <br/>
-        <Form.Label>I'm requesting an visit for: </Form.Label>
+    </Form.Group>
+    </Form>
+       
+    <Form>  
+
+    <Form.Group as={Col}>
+        <Form.Label>I'm requesting an visit for:</Form.Label>
         <DatePicker
         selected={this.state.startDate}
         onChange={this.handleChange}
       />
-  <Row>
+    </Form.Group>
 
     <Form.Group as={Col} controlId="formGridTime">
+      <Row>
+      <Col xs={3}>
       <Form.Label>Time: </Form.Label>
       <Form.Control type="time" placeholder="Time" className="align-right" />
+      </Col>
+      <Col>
+      <Form.Label>Address: </Form.Label>
+      <Form.Control placeholder="1234 Main St" />
+      </Col>
+      </Row>
     </Form.Group>
-  </Row>
 
-  <Form.Group controlId="formGridAddress1">
-    <Form.Label>Address: </Form.Label>
-    <Form.Control placeholder="1234 Main St" />
-  </Form.Group>
-
-  <Row>
-  <Form.Group controlId="exampleForm.SelectCustom">
-    <Form.Label>City: </Form.Label>
-    <Form.Control as="select" custom>
+    <Form.Group as={Col}>
+<Row>
+  <Col>
+      <Form.Label>City: </Form.Label>
+      <Form.Control as="select">
       <option>Manhattan</option>
       <option>Brooklyn</option>
       <option>Queens</option>
       <option>Bronx</option>
-    </Form.Control>
-  </Form.Group>
-
-    <Form.Group as={Col} controlId="formGridZip">
+      </Form.Control>
+  </Col>
+  <Col>
       <Form.Label>Zip: </Form.Label>
       <Form.Control type="number"/>
-    </Form.Group>
-  </Row>
-
-  <Form.Group as={Col} controlId="formGridPhone">
+  </Col>
+    <Col> 
       <Form.Label>Phone: </Form.Label>
       <Form.Control type="number" placeholder="Enter phone number" />
-    </Form.Group>
+      </Col>
+  </Row>
+  </Form.Group>
 
+  <Form.Group as={Col}>
   <InputGroup>
     <InputGroup.Prepend>
       <InputGroup.Text>Reason for Visit:</InputGroup.Text>
@@ -104,12 +110,13 @@ class Patient extends React.Component {
     <FormControl className="textarea" as="textarea"/> 
   </InputGroup>
 
+
   <Button variant="primary" type="submit">
     Submit
   </Button>
-</Form>
+  </Form.Group>
+  </Form>
 
-        
     </div>
   );
 }

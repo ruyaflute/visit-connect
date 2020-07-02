@@ -82,7 +82,7 @@ class App extends React.Component {
           <div className="app">
             <div className='container'>
               Welcome {UserStore.username}
-
+              <Patient />
               <SubmitButton 
                 text={'log out'}
                 disable={false}
@@ -97,7 +97,7 @@ class App extends React.Component {
       return (
         <div className="app">
              <div className='container'>
-               <Patient />
+             <Patient />
               </div>
         </div>
       );
