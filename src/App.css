@@ -63,3 +63,7 @@ body, html, #root, .app, .container {
 .visitFor {
   margin-bottom: 0%;
 }
+
+.header {
+  text-align: center;
+}

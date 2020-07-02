@@ -20,7 +20,7 @@ class Patient extends React.Component {
   render() {
   return (
     <div className="patient">
-<br/><br/>
+
 <Form>
     <Form.Group as={Col} controlId="formBasicEmail">
       <Form.Label>How do I feel today: </Form.Label>
