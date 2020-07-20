@@ -16,6 +16,10 @@ class Patient extends React.Component {
           startDate: date
         });
       };
+
+      onSubmitClick() {
+
+      };
      
   render() {
   return (
@@ -111,7 +115,7 @@ class Patient extends React.Component {
   </InputGroup>
 
 
-  <Button variant="primary" type="submit">
+  <Button variant="primary" type="submit" onClick={this.onSubmitClick}>
     Submit
   </Button>
   </Form.Group>

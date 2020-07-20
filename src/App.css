@@ -38,7 +38,17 @@ body, html, #root, .app, .container {
 }
 
 .submitButton {
+  margin-top: 1em;
  padding-top: 16px;
+ background: #fff;
+ width: 100%;
+ min-width: 280px;
+ color: #565656;
+ padding: 10px;
+ font-size: 14px;
+ font-weight: bold;
+ border: solid 2px #1189de;
+ border-radius: 4px;
 }
 
 
