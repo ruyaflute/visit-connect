@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  patient_id: MyString
+  volunteer_id: MyString
+  purpose: MyString
+  datetime: 2020-08-02 14:16:43
+
+two:
+  patient_id: MyString
+  volunteer_id: MyString
+  purpose: MyString
+  datetime: 2020-08-02 14:16:43
