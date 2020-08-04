@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import PatientCard from './PatientCard'
 
+
 class Volunteer extends React.Component {
   constructor() {
     super();
@@ -27,9 +28,6 @@ class Volunteer extends React.Component {
     }
   }
 
-  onAcceptClick() {
-
-  };
 
   render() {
     let patientCards = this.state.patients.map(patient => {
@@ -39,6 +37,8 @@ class Volunteer extends React.Component {
         </Col>
       )
     })
+
+    
   return (
     <div className="volunteer">
             <h3 className="header">
@@ -46,7 +46,7 @@ class Volunteer extends React.Component {
             </h3>
       <Container fluid>
         <Row>
-          {patientCards}
+          {patientCards}    
         </Row>
       </Container>
     </div>

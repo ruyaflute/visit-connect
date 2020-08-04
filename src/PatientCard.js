@@ -1,11 +1,15 @@
 import React from 'react';
-import { Button, FormControl, Container } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
 class PatientCard extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    onAcceptClick() {
+        alert("Accepted the patient request!")
+      }
 
   render() {
   return (
@@ -17,7 +21,7 @@ class PatientCard extends React.Component {
         <p class="card-text">Language: {this.props.patient.language}</p>
         <p class="card-text">Date Requested: {this.props.patient.visitDate}</p>
         <p class="card-text">Time Requested: {this.props.patient.visitTime}</p>
-        <p class="card-text">Address Requested:{this.props.patient.address}</p>
+        <p class="card-text">Address Requested: {this.props.patient.address}</p>
         <p class="card-text">City: {this.props.patient.city}</p>
         <p class="card-text">Phone: {this.props.patient.phone}</p>
         <p class="card-text">Reason for visit: {this.props.patient.reason}</p>  

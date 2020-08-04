@@ -3,6 +3,8 @@ import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import UserStore from './stores/UserStore';
 
+import Patient from './Patient'
+
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -35,9 +37,10 @@ class LoginForm extends React.Component {
     if (!this.state.username) {
       return;
     }
-    if (!this.state.password) {
+    /*if (!this.state.password) {
       return;
-    }
+    } */
+
     this.setState({
       buttonDisabled: true
     })
@@ -73,6 +76,8 @@ class LoginForm extends React.Component {
 
   render() {
   return (
+    <div className="Welcome">
+      Welcome to Visit Connect!
     <div className="loginForm">
       Log in
       <InputField
@@ -91,9 +96,11 @@ class LoginForm extends React.Component {
       <SubmitButton
       text='Login'
       disabled={this.state.buttonDisabled}
-      onClick={ () => this.doLogin() }
-      />
-      
+      onClick={ () => this.doLogin() } />
+
+     
+
+          </div>
     </div>
   );
 }

@@ -18,7 +18,7 @@ class Patient extends React.Component {
       };
 
       onSubmitClick() {
-
+        alert("sumbmitted request!")
       };
      
   render() {
@@ -27,7 +27,7 @@ class Patient extends React.Component {
 
 <Form>
     <Form.Group as={Col} controlId="formBasicEmail">
-      <Form.Label>How do I feel today: </Form.Label>
+      <Form.Label>How do I feel today - from bad(left) to good(right): </Form.Label>
         <Form.Control type="range" />
 
         <Form.Label as="legend">

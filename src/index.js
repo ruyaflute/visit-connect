@@ -5,10 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Volunteer from './Volunteer';
+import Patient from './Patient';
+import LoginForm from './LoginForm';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Volunteer />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
