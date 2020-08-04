@@ -2,7 +2,7 @@ import React from 'react';
 import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import UserStore from './stores/UserStore';
-
+import { View, Text, TouchableOpacity } from 'react-native';
 import Patient from './Patient'
 
 class LoginForm extends React.Component {
@@ -98,7 +98,13 @@ class LoginForm extends React.Component {
       disabled={this.state.buttonDisabled}
       onClick={ () => this.doLogin() } />
 
-     
+      <TouchableOpacity
+      onPress={() => navigation.navigate('Patient')}
+      >
+        <Text numberOfLines={1}>
+          Don't have an account? Sign up!
+      </Text>
+      </TouchableOpacity>
 
           </div>
     </div>
