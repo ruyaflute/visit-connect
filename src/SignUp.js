@@ -2,7 +2,35 @@ import React from 'react';
 import './App.css';
 
 class SignUp extends React.Component {
-     
+     constructor(props) {
+         super(props);
+
+         this.state = {
+             firstName: null,
+             lastName: null,
+             email: null,
+             formErrors: {
+                 firstName: "",
+                 lastName: "",
+                 email: "",
+             }
+         }
+     }
+
+     handleSubmit= () => {
+         if (this.state) {
+             console.log(`
+             First Name: ${this.state.firstName}
+             Last Name: ${this.state.lastName}
+             Email: ${this.state.email}
+             `)
+         }
+     }
+
+     handleChange = () => {
+
+     }
+
   render() {
   return (
       <div classNamae= "wrapper">

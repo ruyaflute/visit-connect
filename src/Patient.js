@@ -27,7 +27,8 @@ class Patient extends React.Component {
 
 <Form>
     <Form.Group as={Col} controlId="formBasicEmail">
-      <Form.Label>How do I feel today - from bad(left) to good(right): </Form.Label>
+    <h1>My request for a visit</h1>
+      <Form.Label>How do I feel this week - from bad(left) to good(right): </Form.Label>
         <Form.Control type="range" />
 
         <Form.Label as="legend">

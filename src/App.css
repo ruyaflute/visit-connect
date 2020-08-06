@@ -1,3 +1,4 @@
+/*
 body, html, #root, .app, .container {
   width: 100%;
   height: 100%;
@@ -154,8 +155,8 @@ input.error {
 
 .firstName,
 .lastName,
-.email,
-.password {
+.email
+{
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
@@ -166,8 +167,7 @@ input.error {
   width: 49%;
 }
 
-.email,
-.password {
+.email {
   width: 100%;
 }
 
@@ -201,3 +201,4 @@ input.error {
   color: #999;
   font-weight: lighter;
 }
+*/
