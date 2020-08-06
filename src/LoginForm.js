@@ -98,13 +98,13 @@ class LoginForm extends React.Component {
       disabled={this.state.buttonDisabled}
       onClick={ () => this.doLogin() } />
 
-      <TouchableOpacity
+      {/*<TouchableOpacity
       onPress={() => navigation.navigate('Patient')}
-      >
-        <Text numberOfLines={1}>
-          Don't have an account? Sign up!
+      > */}
+        <Text numberOfLines={1} style={{ color: 'white' }}>
+          Don't have an account? Creat Account!
       </Text>
-      </TouchableOpacity>
+      {/*</TouchableOpacity> */}
 
           </div>
     </div>

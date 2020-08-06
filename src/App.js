@@ -5,6 +5,7 @@ import LoginForm from './LoginForm';
 import SubmitButton from './SubmitButton';
 import Patient from './Patient';
 import Volunteer from './Volunteer';
+import SignUp from './SignUp'
 import './App.css';
 
 class App extends React.Component {
@@ -97,7 +98,7 @@ class App extends React.Component {
       return (
         <div className="app">
              <div className='container'>
-             <LoginForm />
+             <SignUp />
               </div>
         </div>
       );
