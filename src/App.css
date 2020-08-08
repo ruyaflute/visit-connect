@@ -1,7 +1,11 @@
-/*
-body, html, #root, .app, .container {
+ .app, .container {
   width: 100%;
   height: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  flex-direction: column;
 }
 
 .container {
@@ -11,9 +15,8 @@ body, html, #root, .app, .container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #282c34;
 }
-
+/*
 .loginForm {
  box-sizing: border-box;
  width: 100%;

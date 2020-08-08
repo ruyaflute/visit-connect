@@ -98,7 +98,7 @@ class App extends React.Component {
       return (
         <div className="app">
              <div className='container'>
-             <PatientPortal />
+             <Volunteer />
               </div>
         </div>
       );

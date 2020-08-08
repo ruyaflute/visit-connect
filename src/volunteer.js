@@ -41,7 +41,7 @@ class Volunteer extends React.Component {
     
   return (
     <div className="volunteer">
-            <h3 className="header">
+            <h3 className="header text-center">
                 Patient List
             </h3>
       <Container fluid>
